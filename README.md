@@ -3,8 +3,10 @@
 
 /Created a Database DAY-1 MYSQL/
 CREATE DATABASE `DAY-1 MYSQL`;
+
 /Created a Associate Table/
 CREATE TABLE `Associate` (`Id` int auto_increment primary key, `Name` varchar(255), `Identity Number` int, `email` varchar(255));
+
 /Created a Age Column/
 ALTER TABLE `Associate` ADD COLUMN `Age` int;
 /Drop a Column Identity Number/
