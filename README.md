@@ -1,1 +1,41 @@
 # My-SQL--Day1-Task
+
+
+/Created a Database DAY-1 MYSQL/
+CREATE DATABASE `DAY-1 MYSQL`;
+/Created a Associate Table/
+CREATE TABLE `Associate` (`Id` int auto_increment primary key, `Name` varchar(255), `Identity Number` int, `email` varchar(255));
+/Created a Age Column/
+ALTER TABLE `Associate` ADD COLUMN `Age` int;
+/Drop a Column Identity Number/
+ALTER TABLE `Associate` Drop COLUMN `Identity Number`;
+/Created a Identitynumber Column/
+ALTER TABLE `Associate` ADD COLUMN `Identitynumber` int;
+/Inserted rows/
+INSERT INTO `Associate` (Id, Name, IdentityNumber, email, Age) VALUES('1', 'Santosh', '685188','aa@gmail.com','26');
+INSERT INTO `Associate` (Id, Name, IdentityNumber, email, Age) VALUES('2', 'Manmath', '685189','bb@gmail.com','24');
+INSERT INTO `Associate` (Id, Name, IdentityNumber, email, Age) VALUES('3', 'Sairaj', '685179','cc@gmail.com','25');
+INSERT INTO `Associate` (Id, Name, IdentityNumber, email, Age) VALUES('4', 'Goutham', '682179','cc@gmail.com','27');
+INSERT INTO `Associate` (Id, Name, IdentityNumber, email, Age) VALUES('5', 'Venkat', '672139','dd@gmail.com','28');
+/Count the no of Associates/
+select count(*) from Associate;
+/Sum of all the associates Age/
+select sum(age) from Associate;
+/Average of Ages/
+select Avg(age) from Associate;
+/Minimum value of Ages/
+select Min(age) from Associate;
+/Maximum of Ages/
+select Max(age) from Associate;
+/Using Limt and Offset/
+select * from Associate limit 4  offset 1;
+/And Query/
+select * from Associate where id=2 and age=24;
+/or Query/
+select * from Associate where id=2 or age=25;
+/In Query/
+select * from Associate where id in (4,5)
+/Between/
+select * from Associate where age between 25 and 30;
+/List all the Associates names/
+SELECT name FROM Associate;
